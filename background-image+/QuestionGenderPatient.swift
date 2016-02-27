@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class QuestionGenderPatient: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     @IBOutlet weak var picker: UIPickerView!
+    var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
+    var data="I don't mind"
     var pickerData: [String] = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +21,7 @@ class QuestionGenderPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["No", "Male", "Female", "Transgendered (male to female)","Transgendered (female to male)", "I would rather not say"]
+        pickerData = ["I don't mind", "Male", "Female", "Transgendered (male to female)","Transgendered (female to male)", "I would rather not say"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,6 +44,23 @@ class QuestionGenderPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
+    
+    @IBAction func pressedNext(sender: AnyObject) {
+        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
+            error, authData in
+            if error != nil {
+                print("error")
+            } else {
+                let gender = ["Gender": self.data]
+                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
+                usersRef.updateChildValues(gender)                          }
+        }                    }
+
+        
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        data = pickerData[row]
+    }
+    
     
 }
 

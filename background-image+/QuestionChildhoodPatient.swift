@@ -7,40 +7,42 @@
 //
 
 import UIKit
+import Firebase
 
-class QuestionChildhoodPatient: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
-    @IBOutlet weak var picker: UIPickerView!
-    var pickerData: [String] = [String]()
+class QuestionChildhoodPatient: UIViewController {
+    var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
+    var sliderValue = 0
+    
+    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var slider: UISlider!
+    var scoreValue : Int = 4
+    
+    @IBAction func sliderChange(sender: UISlider) {
+        sliderValue = Int(round(sender.value))
+        score.text = "\(sliderValue)"
+    }
+    
+    @IBAction func next(sender: AnyObject) {
+        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
+            error, authData in
+            if error != nil {
+                print("error")
+            } else {
+                let directive = ["directive":self.sliderValue]
+                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
+                usersRef.updateChildValues(directive)                          }
+        }                    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Connect data:
-        self.picker.delegate = self
-        self.picker.dataSource = self
-        
-        pickerData = ["No, not really", "Yes, of course", "I don't mind"]
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
-    // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
     
-    // The number of rows of data
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    
-    // The data to return for the row and component (column) that's being passed in
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
     
 }
 

@@ -6,16 +6,18 @@
 //  Copyright (c) 2016 UCL. All rights reserved.
 //
 import UIKit
+import RealmSwift
+import Firebase
+
 
 class signUpPage: UIViewController {
-    
+    var userEmail = ""
+    var password = ""
+    var repeatPassword = ""
+    var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
     //text fields
     
-    @IBOutlet weak var firstNameField: UITextField!
-    @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var snField: UITextField!
-    @IBOutlet weak var genderField: UISegmentedControl!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var repassField: UITextField!
     
@@ -39,14 +41,15 @@ class signUpPage: UIViewController {
     
     @IBAction func registerButtonTapped(sender: AnyObject) {
 
-        let userEmail = emailField.text
-        let password = passField.text
-        let repeatPassword = repassField.text
+        
+        userEmail = emailField.text!
+        password = passField.text!
+        repeatPassword = repassField.text!
         
         
         //check for empty fields
         
-        if (userEmail!.isEmpty || (userEmail == "UCL email") || password!.isEmpty || password=="Password" || repeatPassword!.isEmpty || repeatPassword=="Retype Passowrd") {
+        if (userEmail.isEmpty || (userEmail == "UCL email") || password.isEmpty || password=="Password" || repeatPassword.isEmpty || repeatPassword=="Retype Passowrd") {
             displayAlertMessage("One of the fields is empty")
             return
         }
@@ -60,6 +63,31 @@ class signUpPage: UIViewController {
         }
         
         else{
+
+            ref.createUser(userEmail, password: password,
+                withValueCompletionBlock: { error, result in
+                    if error != nil {
+                    self.displayAlertMessage("error")
+                    } else {
+                       // ViewController.giveEmail(userEmail)
+                        
+                        
+                        self.ref.authUser(self.userEmail, password: self.password) {
+                            error, authData in
+                            if error != nil {
+                                // Something went wrong. :(
+                            } else {
+                                LoggedInInfo.sharedInstance.username=self.userEmail
+                                LoggedInInfo.sharedInstance.pass=self.password
+
+                                let newUser = ["email": self.userEmail]
+                                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
+                                usersRef.updateChildValues(newUser)
+                                self.performSegueWithIdentifier("nextPage", sender: nil)}
+                        }                    }
+
+            
+            })
             performSegueWithIdentifier("nextPage", sender: nil)
             //store data
             //display alert message with confirmation

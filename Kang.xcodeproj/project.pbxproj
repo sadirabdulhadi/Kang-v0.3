@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B22EDD41C7F3B4C00CBF57D /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDD31C7F3B4C00CBF57D /* Firebase.framework */; };
+		0B22EDD51C7F3BE300CBF57D /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDD31C7F3B4C00CBF57D /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B22EDD71C7F3CFB00CBF57D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDD61C7F3CFB00CBF57D /* CFNetwork.framework */; };
+		0B22EDD91C7F3D0500CBF57D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDD81C7F3D0500CBF57D /* Security.framework */; };
+		0B22EDDB1C7F3D1000CBF57D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDDA1C7F3D1000CBF57D /* SystemConfiguration.framework */; };
+		0B22EDDD1C7F3D2000CBF57D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDDC1C7F3D2000CBF57D /* libc++.tbd */; };
+		0B22EDDF1C7F3D2C00CBF57D /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDDE1C7F3D2C00CBF57D /* libicucore.tbd */; };
+		0B22EDE41C7F557D00CBF57D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22EDE31C7F557D00CBF57D /* UserInfoManager.swift */; };
+		0B29A7011C80F465001ED0C4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7001C80F465001ED0C4 /* Login.swift */; };
+		0B29A7031C8164E3001ED0C4 /* LoggedInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */; };
 		0BCE55111C6B75100083A2BE /* AdobeHeitiStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BCE55101C6B75100083A2BE /* AdobeHeitiStd-Regular.otf */; };
 		0BCE55131C6B75250083A2BE /* STHeiti Light.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 0BCE55121C6B75250083A2BE /* STHeiti Light.ttc */; };
 		0BCE55151C6B7B950083A2BE /* signUpTheraPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE55141C6B7B950083A2BE /* signUpTheraPage.swift */; };
@@ -49,6 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0B22EDD51C7F3BE300CBF57D /* Firebase.framework in Embed Frameworks */,
 				0BD332251C7141F300E5F31D /* RealmSwift.framework in Embed Frameworks */,
 				0BD332231C7141F300E5F31D /* Realm.framework in Embed Frameworks */,
 			);
@@ -58,6 +69,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B22EDD31C7F3B4C00CBF57D /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		0B22EDD61C7F3CFB00CBF57D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0B22EDD81C7F3D0500CBF57D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0B22EDDA1C7F3D1000CBF57D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0B22EDDC1C7F3D2000CBF57D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		0B22EDDE1C7F3D2C00CBF57D /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		0B22EDE31C7F557D00CBF57D /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		0B29A7001C80F465001ED0C4 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInInfo.swift; sourceTree = "<group>"; };
 		0BCE55101C6B75100083A2BE /* AdobeHeitiStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdobeHeitiStd-Regular.otf"; sourceTree = "<group>"; };
 		0BCE55121C6B75250083A2BE /* STHeiti Light.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti Light.ttc"; sourceTree = "<group>"; };
 		0BCE55141C6B7B950083A2BE /* signUpTheraPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpTheraPage.swift; sourceTree = "<group>"; };
@@ -90,6 +110,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B22EDDF1C7F3D2C00CBF57D /* libicucore.tbd in Frameworks */,
+				0B22EDDD1C7F3D2000CBF57D /* libc++.tbd in Frameworks */,
+				0B22EDDB1C7F3D1000CBF57D /* SystemConfiguration.framework in Frameworks */,
+				0B22EDD91C7F3D0500CBF57D /* Security.framework in Frameworks */,
+				0B22EDD71C7F3CFB00CBF57D /* CFNetwork.framework in Frameworks */,
+				0B22EDD41C7F3B4C00CBF57D /* Firebase.framework in Frameworks */,
 				0BD332241C7141F300E5F31D /* RealmSwift.framework in Frameworks */,
 				0BD332221C7141F300E5F31D /* Realm.framework in Frameworks */,
 			);
@@ -105,11 +131,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B22EDE01C7F3D6F00CBF57D /* .frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B22EDDA1C7F3D1000CBF57D /* SystemConfiguration.framework */,
+				0B22EDD81C7F3D0500CBF57D /* Security.framework */,
+				0B22EDD61C7F3CFB00CBF57D /* CFNetwork.framework */,
+				0B22EDD31C7F3B4C00CBF57D /* Firebase.framework */,
+				0BD332201C7141F300E5F31D /* Realm.framework */,
+				0BD332211C7141F300E5F31D /* RealmSwift.framework */,
+				0B22EDDC1C7F3D2000CBF57D /* libc++.tbd */,
+				0B22EDDE1C7F3D2C00CBF57D /* libicucore.tbd */,
+			);
+			name = .frameworks;
+			sourceTree = "<group>";
+		};
 		0BE8017C1C63CD5700E761A6 = {
 			isa = PBXGroup;
 			children = (
-				0BD332201C7141F300E5F31D /* Realm.framework */,
-				0BD332211C7141F300E5F31D /* RealmSwift.framework */,
+				0B22EDE01C7F3D6F00CBF57D /* .frameworks */,
 				0BE801871C63CD5700E761A6 /* Kang */,
 				0BE8019D1C63CD5700E761A6 /* KangTests */,
 				0BE801861C63CD5700E761A6 /* Products */,
@@ -131,7 +171,10 @@
 				0BE8018A1C63CD5700E761A6 /* AppDelegate.swift */,
 				0BE801F01C6525AB00E761A6 /* Main.storyboard */,
 				0BE8018C1C63CD5700E761A6 /* ViewController.swift */,
+				0B29A7001C80F465001ED0C4 /* Login.swift */,
+				0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */,
 				0BE8020A1C67CF0600E761A6 /* signUpPage.swift */,
+				0B22EDE31C7F557D00CBF57D /* UserInfoManager.swift */,
 				0BE802021C66AF2300E761A6 /* QuestionDirectivePatient.swift */,
 				0BE802041C66AF3300E761A6 /* QuestionEthnicityPatient.swift */,
 				0BE802061C67BC9E00E761A6 /* QuestionGenderPatient.swift */,
@@ -303,12 +346,15 @@
 			files = (
 				0BCE55171C6B7CBE0083A2BE /* QuestionDirectiveThera.swift in Sources */,
 				0BCE551E1C6B8B4E0083A2BE /* QuestionThera3.swift in Sources */,
+				0B29A7031C8164E3001ED0C4 /* LoggedInInfo.swift in Sources */,
 				0BE802051C66AF3300E761A6 /* QuestionEthnicityPatient.swift in Sources */,
 				0BE8018D1C63CD5700E761A6 /* ViewController.swift in Sources */,
 				0BD3326A1C76272100E5F31D /* QuestionExpertPatient.swift in Sources */,
 				0BE802091C67C1E200E761A6 /* QuestionChildhoodPatient.swift in Sources */,
+				0B29A7011C80F465001ED0C4 /* Login.swift in Sources */,
 				0BCE55221C6CC6190083A2BE /* TellUsThera.swift in Sources */,
 				0BE8020B1C67CF0600E761A6 /* signUpPage.swift in Sources */,
+				0B22EDE41C7F557D00CBF57D /* UserInfoManager.swift in Sources */,
 				0BCE551B1C6B81010083A2BE /* QuestionEthnicityThera.swift in Sources */,
 				0BE802071C67BC9E00E761A6 /* QuestionGenderPatient.swift in Sources */,
 				0BE802031C66AF2300E761A6 /* QuestionDirectivePatient.swift in Sources */,
