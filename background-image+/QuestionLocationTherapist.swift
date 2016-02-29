@@ -9,12 +9,12 @@
 import UIKit
 import Firebase
 
-class QuestionExpertPatient: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class QuestionLocationPatient: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
-    var data="No,I have multiple issues"
-
+    var data="North London"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +22,7 @@ class QuestionExpertPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["No,I have multiple issues", "No, not sure about the issues", "Anxiety", "Behavioural control", "Bereavement", "Depression", "Drug and alcohol problems", "Eating or body image issues", "Obsessions and compulsions", "Relationship issues", "Self-harm", "Sexuality or gender issues", "Stress" ]
+        pickerData = ["North London", "South London", "East London", "West London", "Central London" ]
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,17 +30,18 @@ class QuestionExpertPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func nextPressed(sender: AnyObject) {
         self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
             error, authData in
             if error != nil {
                 print("error")
             } else {
-                let gender = ["Expertise": self.data]
+                let location = ["Location": self.data]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(gender)                          }
+                usersRef.updateChildValues(location)                          }
         }                    }
-
+    
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1

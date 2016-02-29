@@ -9,17 +9,17 @@
 import UIKit
 import Firebase
 
-class QuestionChildhoodPatient: UIViewController {
+class QuestionCostPatient: UIViewController {
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
-    var sliderValue = 4
+    var sliderValue = 75
     
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var slider: UISlider!
-    var scoreValue : Int = 4
+    var scoreValue : Int = 75
     
     @IBAction func sliderChange(sender: UISlider) {
         sliderValue = Int(round(sender.value))
-        score.text = "\(sliderValue)"
+        score.text = "£\(sliderValue)"
     }
     
     @IBAction func next(sender: AnyObject) {
@@ -28,9 +28,9 @@ class QuestionChildhoodPatient: UIViewController {
             if error != nil {
                 print("error")
             } else {
-                let childhood = ["Childhood":self.sliderValue]
+                let cost = ["cost":self.sliderValue]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(childhood)                          }
+                usersRef.updateChildValues(cost)                          }
         }                    }
     
     override func viewDidLoad() {
@@ -40,7 +40,6 @@ class QuestionChildhoodPatient: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     
     

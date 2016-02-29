@@ -17,6 +17,8 @@
 		0B22EDE41C7F557D00CBF57D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22EDE31C7F557D00CBF57D /* UserInfoManager.swift */; };
 		0B29A7011C80F465001ED0C4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7001C80F465001ED0C4 /* Login.swift */; };
 		0B29A7031C8164E3001ED0C4 /* LoggedInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */; };
+		0B29A7051C82266E001ED0C4 /* QuestionCostPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7041C82266E001ED0C4 /* QuestionCostPatient.swift */; };
+		0B29A7071C822BA0001ED0C4 /* QuestionLocationTherapist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */; };
 		0BCE55111C6B75100083A2BE /* AdobeHeitiStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BCE55101C6B75100083A2BE /* AdobeHeitiStd-Regular.otf */; };
 		0BCE55131C6B75250083A2BE /* STHeiti Light.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 0BCE55121C6B75250083A2BE /* STHeiti Light.ttc */; };
 		0BCE55151C6B7B950083A2BE /* signUpTheraPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE55141C6B7B950083A2BE /* signUpTheraPage.swift */; };
@@ -78,6 +80,8 @@
 		0B22EDE31C7F557D00CBF57D /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		0B29A7001C80F465001ED0C4 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInInfo.swift; sourceTree = "<group>"; };
+		0B29A7041C82266E001ED0C4 /* QuestionCostPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCostPatient.swift; sourceTree = "<group>"; };
+		0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionLocationTherapist.swift; sourceTree = "<group>"; };
 		0BCE55101C6B75100083A2BE /* AdobeHeitiStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdobeHeitiStd-Regular.otf"; sourceTree = "<group>"; };
 		0BCE55121C6B75250083A2BE /* STHeiti Light.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti Light.ttc"; sourceTree = "<group>"; };
 		0BCE55141C6B7B950083A2BE /* signUpTheraPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpTheraPage.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				0BE802061C67BC9E00E761A6 /* QuestionGenderPatient.swift */,
 				0BE802081C67C1E200E761A6 /* QuestionChildhoodPatient.swift */,
 				0BD332691C76272100E5F31D /* QuestionExpertPatient.swift */,
+				0B29A7041C82266E001ED0C4 /* QuestionCostPatient.swift */,
+				0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */,
 				0BCE55141C6B7B950083A2BE /* signUpTheraPage.swift */,
 				0BCE55161C6B7CBE0083A2BE /* QuestionDirectiveThera.swift */,
 				0BCE551A1C6B81010083A2BE /* QuestionEthnicityThera.swift */,
@@ -353,6 +359,7 @@
 				0BE802091C67C1E200E761A6 /* QuestionChildhoodPatient.swift in Sources */,
 				0B29A7011C80F465001ED0C4 /* Login.swift in Sources */,
 				0BCE55221C6CC6190083A2BE /* TellUsThera.swift in Sources */,
+				0B29A7071C822BA0001ED0C4 /* QuestionLocationTherapist.swift in Sources */,
 				0BE8020B1C67CF0600E761A6 /* signUpPage.swift in Sources */,
 				0B22EDE41C7F557D00CBF57D /* UserInfoManager.swift in Sources */,
 				0BCE551B1C6B81010083A2BE /* QuestionEthnicityThera.swift in Sources */,
@@ -360,6 +367,7 @@
 				0BE802031C66AF2300E761A6 /* QuestionDirectivePatient.swift in Sources */,
 				0BE8018B1C63CD5700E761A6 /* AppDelegate.swift in Sources */,
 				0BCE55151C6B7B950083A2BE /* signUpTheraPage.swift in Sources */,
+				0B29A7051C82266E001ED0C4 /* QuestionCostPatient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
