@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  background-image+
 //
-//  Created by Sadir Abdulhadi on 2/4/16.
+//  Created by Sadir Abdulhadi and Reemma (excuse you Sadir :P ) on 2/4/16.
 //  Copyright (c) 2016 UCL. All rights reserved.
 //
 

@@ -1,9 +1,9 @@
 //
-//  ViewController.swift
-//  background-image+
+//  QuestionLocationPatient.swift
+//  Kang
 //
-//  Created by Sadir Abdulhadi on 2/4/16.
-//  Copyright (c) 2016 UCL. All rights reserved.
+//  Created by Reemma Muthal Puredath on 06/03/2016.
+//  Copyright © 2016 UCL. All rights reserved.
 //
 
 import UIKit

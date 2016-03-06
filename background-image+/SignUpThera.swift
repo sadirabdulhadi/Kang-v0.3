@@ -86,8 +86,8 @@ class signUpThera: UIViewController {
                                 LoggedInInfo.sharedInstance.username=self.email
                                 LoggedInInfo.sharedInstance.pass=self.password
                                 
-                                let newUser = ["email":self.email]
-                                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("psychologists").childByAppendingPath(authData.uid)
+                                let newUser = ["name": self.name, "email":self.email, "phone": self.phone, "membership":self.membership ]
+                                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
                                 usersRef.updateChildValues(newUser)
                                 self.performSegueWithIdentifier("nextPage", sender: nil)}
                         }                    }

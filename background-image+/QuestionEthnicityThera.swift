@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
-class QuestionThera2: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class QuestionEthnicityThera: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
+    var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
+    var data="South Asian"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,11 +25,22 @@ class QuestionThera2: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerData = ["South Asian", "East Asian", "Hispanic", "Caucasian", "Black", "Middle Eastern/North African","Other", "I would rather not say"]
     }
     
+    @IBAction func nextPressed(sender: AnyObject) {
+        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
+            error, authData in
+            if error != nil {
+                print("error")
+            } else {
+                let ethnicity = ["Ethnicity": self.data]
+                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
+                usersRef.updateChildValues(ethnicity)                          }
+        }                    }
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -40,6 +55,10 @@ class QuestionThera2: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        data = pickerData[row]
     }
     
 }
