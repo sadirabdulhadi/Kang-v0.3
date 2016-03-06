@@ -380,7 +380,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRG-A3-EA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="507" y="358"/>
+            <point key="canvasLocation" x="539" y="327"/>
         </scene>
         <!--Title-->
         <scene sceneID="J4z-nD-ZIA">
@@ -749,7 +749,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgw-fb-lgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="1873"/>
+            <point key="canvasLocation" x="32" y="1719"/>
         </scene>
         <!--Title-->
         <scene sceneID="rHB-rK-p66">
@@ -1482,7 +1482,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrQ-z3-ONQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="1128"/>
+            <point key="canvasLocation" x="23" y="1000"/>
         </scene>
     </scenes>
     <resources>
@@ -1492,15 +1492,15 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
         <image name="bulle2" width="1355" height="1282"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="emM-Of-BGO"/>
-        <segue reference="tkT-7B-uTS"/>
+        <segue reference="pN6-Cw-aZM"/>
+        <segue reference="7ca-6P-2cW"/>
+        <segue reference="Y2Y-0t-6Xl"/>
+        <segue reference="USa-gZ-k1K"/>
+        <segue reference="yzM-1e-mDt"/>
         <segue reference="pyH-IB-xSQ"/>
+        <segue reference="tkT-7B-uTS"/>
         <segue reference="MdA-5i-FZi"/>
         <segue reference="9pj-0o-9cd"/>
         <segue reference="OlJ-fu-qi5"/>
-        <segue reference="Y2Y-0t-6Xl"/>
-        <segue reference="USa-gZ-k1K"/>
-        <segue reference="7ca-6P-2cW"/>
-        <segue reference="pN6-Cw-aZM"/>
     </inferredMetricsTieBreakers>
 </document>
